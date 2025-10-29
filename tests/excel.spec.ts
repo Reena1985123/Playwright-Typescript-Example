@@ -12,6 +12,7 @@ test.describe("Login flow – data driven", () => {
 			await allure.parameter("username", record.user);
 			await allure.parameter("password", record.password);
 			await page.goto("https://www.saucedemo.com/");
+			console.log();
 			if (record.user) await page.getByTestId("username").fill(record.user);
 			if (record.password)
 				await page.getByTestId("password").fill(record.password);
