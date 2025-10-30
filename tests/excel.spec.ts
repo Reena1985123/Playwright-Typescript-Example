@@ -17,6 +17,7 @@ test.describe("Login flow – data driven", () => {
 			if (record.password)
 				await page.getByTestId("password").fill(record.password);
 			await page.getByTestId("login-button").click();
+			console.log();
 			await expect(page.getByTestId("error")).toHaveText(record.error);
 		});
 	}
